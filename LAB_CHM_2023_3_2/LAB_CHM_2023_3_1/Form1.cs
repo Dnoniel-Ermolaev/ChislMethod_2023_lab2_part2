@@ -439,7 +439,7 @@ namespace LAB_CHM_2023_3_1
                 "ПРИ ВАШЕМ ПАРАМЕТРЕ ТАУ МЕТОД НЕ БУДЕТ СХОДИТСЯ!\n" + "Оптимальное 0 < T(тау) < " + maxtau.ToString() +
                 "\n Будет выставленно ТАУ по верхней границе.",
                 "Проверка T(тау)");
-                textBox28.Text = Convert.ToString(maxtau);
+                textBox29.Text = Convert.ToString(maxtau);
                 Tau = maxtau;
             }
 
@@ -479,7 +479,7 @@ namespace LAB_CHM_2023_3_1
                 for (int i = 1; i < n; i++)
                 {
                     temp = A * v2[i][j] + h2 * (v2[i - 1][j] + v2[i + 1][j]) + k2 * (v2[i][j - 1] + v2[i][j + 1])  - f2(x[i], y[j]);
-                    if (temp >= maxR1) maxR1 = Math.Abs(temp);
+                    if (Math.Abs(temp) >= maxR1) maxR1 = Math.Abs(temp);
                     //maxR1 += temp * temp;
                 }
             }
@@ -527,7 +527,7 @@ namespace LAB_CHM_2023_3_1
                 {
                     f[i][j] = f2(x[i], y[j]);
                     //MaxF2 += f[i][j] * f[i][j];
-                    if (Math.Abs(f[i][j]) > MaxF) MaxF2 = Math.Abs(f[i][j]);
+                    if (Math.Abs(f[i][j]) > MaxF2) MaxF2 = Math.Abs(f[i][j]);
                 }
             }
 
@@ -603,7 +603,7 @@ namespace LAB_CHM_2023_3_1
                 for (int i = 1; i < n; i++)
                 {
                     temp = A * v2_2[i][j] + h2 * (v2_2[i - 1][j] + v2_2[i + 1][j]) + k2 * (v2_2[i][j - 1] + v2_2[i][j + 1]) - f2(x[i], y[j]);
-                    if (temp >= maxR1) maxR = Math.Abs(temp);
+                    if (Math.Abs(temp) >= maxR) maxR = Math.Abs(temp);
                     //maxR += temp * temp;
                 }
             }
